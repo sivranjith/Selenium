@@ -19,11 +19,18 @@ public class Get_Elementby_ID_1 {
 	System.out.println("Hello Google");
 	String baseURL="https://dev-portal.lendertoolkit.com/login";
 	String tagName="";
+	String title="";
 	driver.get(baseURL);
+	title= driver.getTitle();
+	
 	tagName=driver.findElement(By.id("username")).getTagName();
-	String className = driver.findElement(By.cssSelector("input[id=username]")).getText();
-	//System.out.println(tagName);
-	System.out.println(className);
+	//driver.findElement(By.name("Log In")).click();
+	//String className = driver.findElement(By.cssSelector("input[id=username]")).getText();	
+	System.out.println(tagName);
+	System.out.println(title);
+	//System.out.println(className);
+	//driver.get("https://www.guru99.com/selenium-tutorial.html");
+	driver.navigate().to("https://www.guru99.com/selenium-tutorial.html");
 	driver.close();
 	System.exit(0);
 	
